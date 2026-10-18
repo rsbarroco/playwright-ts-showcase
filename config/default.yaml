@@ -1,0 +1,14 @@
+ui:
+  baseUrl: https://the-internet.herokuapp.com
+  # Credentials are never stored here: set UI_USERNAME and UI_PASSWORD in the environment.
+api:
+  baseUrl: https://jsonplaceholder.typicode.com
+run:
+  retries: 0
+  ciRetries: 2
+  workers: 4
+  timeoutMs: 30000
+  expectTimeoutMs: 10000
+evidence:
+  highlightColor: '#ff0050'
+  highlightWidthPx: 4
