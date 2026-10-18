@@ -1,0 +1,14 @@
+title = "playwright-ts-showcase"
+
+[extend]
+useDefault = true
+
+# Fails the scan if any committed file contains the demo site password.
+[[rules]]
+id = "demo-site-password"
+description = "Demo site credentials must come from environment variables"
+regex = '''(?i)super[s]ecret[p]assword'''
+
+[allowlist]
+description = "Generated and third-party files"
+paths = ['''package-lock\.json''', '''\.gitleaks\.toml''']
