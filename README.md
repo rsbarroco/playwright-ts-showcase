@@ -5,6 +5,8 @@
 ![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178C6?logo=typescript)
 ![License: MIT](https://img.shields.io/badge/license-MIT-blue)
 
+**Live test report:** https://rsbarroco.github.io/playwright-ts-showcase/
+
 A compact, production-style test automation framework built with **Playwright** and **TypeScript**.
 It covers browser UI tests and REST API tests in a single runner and shows the patterns used in
 real-world suites: page objects, custom fixtures, layered configuration, annotated visual evidence
@@ -63,7 +65,7 @@ selectors, endpoints and environment details live in the framework layer.
 
 ## Getting started
 
-Requirements: Node.js 20+.
+Requirements: Node.js 20+ (CI uses Node.js 24).
 
 ```bash
 npm ci
@@ -146,6 +148,8 @@ Every push to `main`, every pull request and manual dispatches run:
 3. `e2e`: reads `UI_USERNAME` / `UI_PASSWORD` from repository secrets (login tests are skipped with a
    warning if they are not configured), installs Chromium, runs all tests (with retries on CI) and uploads `playwright-report/` as
    the **playwright-report** artifact, even when tests fail.
+4. `deploy-report` (pushes to `main` only): publishes the same HTML report to GitHub Pages at
+   https://rsbarroco.github.io/playwright-ts-showcase/.
 
 ## License
 
